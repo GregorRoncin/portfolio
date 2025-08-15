@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grégor Roncin - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav-bar">
+      <h1 class="logo" onclick="showSection('home')">Grégor Roncin</h1>
+      <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('publications')">Publications</a>
+        <a href="#" onclick="showSection('about')">About / CV</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="section active">
+    <div class="container">
+      <h2>AI Engineering Student & Machine Learning Enthusiast</h2>
+      <p>I build data-driven systems and research prototypes that turn ideas into measurable impact.</p>
+      <div class="buttons">
+        <button onclick="showSection('projects')">View Projects</button>
+        <button onclick="showSection('publications')">Publications</button>
+        <a href="CV_RONCIN.pdf" target="_blank" class="btn-outline">Download CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <input type="text" id="searchProject" placeholder="Search project..."/>
+      <div id="projectList" class="grid"></div>
+      <div id="projectDetail" class="hidden"></div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2>Publications</h2>
+      <div id="pubList"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About / CV</h2>
+      <p>I’m an AI engineering student at Mines Paris, passionate about building machine learning systems for healthcare, finance and environmental applications.</p>
+      <h3>Experience</h3>
+      <ul id="expList"></ul>
+      <h3>Education</h3>
+      <ul id="eduList"></ul>
+      <h3>Skills</h3>
+      <ul id="skillList" class="tag-list"></ul>
+      <a href="CV_RONCIN.pdf" target="_blank" class="btn-outline">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <form onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Your name" required/>
+        <input type="email" name="email" placeholder="Your email" required/>
+        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <button type="submit">Send Email</button>
+      </form>
+      <div class="contact-info">
+        <p><strong>Email:</strong> gregor.roncin@etu.minesparis.psl.eu</p>
+        <p><strong>Phone:</strong> +33 7 83 63 79 04</p>
+        <p><strong>Links:</strong> <a href="#">GitHub</a> • <a href="#">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Grégor Roncin — All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
