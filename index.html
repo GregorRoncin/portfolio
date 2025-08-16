@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grégor Roncin - Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container nav-bar">
+      <h1 class="logo" onclick="showSection('home')">Grégor Roncin</h1>
+      <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('publications')">Publications</a>
+        <a href="#" onclick="showSection('about')">About / CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="section active">
+    <div class="container">
+      <h2>AI Engineering Student & Machine Learning Researcher</h2>
+      <p>Passionate about machine learning, deep learning, and AI applications in healthcare and research. Currently pursuing my Master's degree at École des Mines de Paris with focus on Mathematical Vision and Learning.</p>
+      <div class="buttons">
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('publications')">Publications</button>
+        <button onclick="showSection('about')">About</button>
+        <a href="attached_assets/CV_RONCIN_1755375712631.pdf" target="_blank" class="btn-outline">Download CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <input type="text" id="searchProject" placeholder="Search projects..." onkeyup="filterProjects()"/>
+      <div id="projectList" class="grid"></div>
+      <div id="projectDetail" class="hidden"></div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2>Publications</h2>
+      <p>My research contributions in machine learning, medical AI, and respiratory therapy optimization. Click to learn more about each publication.</p>
+      <div id="pubList" class="grid"></div>
+      <div id="publicationDetail" class="hidden"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="cv-layout">
+        <div class="cv-header">
+          <h2>Grégor Roncin</h2>
+          <p class="cv-subtitle">AI Engineering Student & Machine Learning Researcher</p>
+          <div class="cv-contact">
+            <span>gregor.roncin@etu.minesparis.psl.eu</span> • 
+            <span>+33 7 83 63 79 04</span>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Education</h3>
+          <div id="eduList"></div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Professional Experience</h3>
+          <div id="expList"></div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Skills</h3>
+          <div class="cv-skills">
+            <div><strong>Programming:</strong> <span id="progSkills"></span></div>
+            <div><strong>Languages:</strong> <span id="langSkills"></span></div>
+          </div>
+        </div>
+
+        <div class="cv-download">
+          <a href="attached_assets/CV_RONCIN_1755375712631.pdf" target="_blank" class="btn-outline">Download Full CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Grégor Roncin — All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
