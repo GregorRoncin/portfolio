@@ -4,7 +4,7 @@ const projects = [
     title: "Machine Learning for Stock Return Prediction",
     date: "Jun 2025",
     summary: "Built a model via feature engineering and multi-algorithm experimentation (ranked 2 / 960 teams)",
-    details: "Developed a comprehensive machine learning model for stock return prediction as part of the Qube Research & Technologies Data Challenge. The project involved extensive feature engineering, testing multiple algorithms, and optimizing model performance. Successfully ranked 2nd out of 960 participating teams through innovative approaches to financial time series prediction and risk modeling.",
+    details: "As part of the course Introduction to Statistical Learning at PUC Rio, we wrote an scientific article based on Qube Research & Technologies Data Challenge about stock return prediction. Therefore, I developed machine learning models to predict stock returns. The project required extensive feature engineering (using Python’s Pandas), experimenting with and optimizing multiple statistical learning algorithms, and carefully tuning parameters to maximize accuracy. <br> Through this approach, our team achieved 2nd place out of more than 960 participants, demonstrating the effectiveness of this experimental method of optimization in financial time series forecasting and risk modeling. <br> This project strengthened my expertise in machine learning algorithms, hands-on model optimization, and the experimental mindset required of an AI Engineer—constantly iterating to identify the best features and hyperparameters. <br> Our full research article can be downloaded below.",
     tags: ["Python", "Scikit-learn", "Feature Engineering", "Finance"],
     github: "#",
     pdf: "attached_assets/PAPER_TITLE_1755376771851.pdf"
